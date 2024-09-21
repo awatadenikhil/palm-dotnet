@@ -6,3 +6,12 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+
+<h2>Query String Parameters</h2>
+<ul>
+    @foreach (var key in Request.Query.Keys)
+    {
+        <li>@key: @Request.Query[key]</li>
+    }
+</ul>
